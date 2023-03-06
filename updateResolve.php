@@ -1,43 +1,28 @@
 <?php
-session_start();
-
-echo "Ultimo da Fila:"; 
-echo $atual=$_SESSION['num'];
-echo "<br>";
-
-echo "Nova Posição:"; 
-echo $carros=$atual+1;
-echo "<br>";
+$conn = mysqli_connect("localhost", "root", "", "site1")
+or die("Erro na conexăo com o BD");
 
 
-echo "ID :";
-echo $id=$_GET["cod"];
+                 $sql = "SELECT * from country WHERE position < 99";
+                 $res = mysqli_query($conn, $sql);
+                 while ($produto = mysqli_fetch_array( $res)) { 
+                        
+                      echo "<tbody>";
+                      echo "<tr>";
+                      echo $nome=$produto['id'];  
 
-?>
+                      echo "<th scope='row'>";
+                      echo $nome=$produto['name'];  
+                      echo "</th>"; 
+                 
+                      echo "<td>";
+                      echo $p=$produto['position']; 
 
-<?php
-include("conecta.php");
-  
-$sql = "update country SET position = '$carros' where id='$id'";
-$res = mysqli_query($conn, $sql);
+                      echo "</td>"; 
+                      echo "</tr>"; 
+                      echo "</tbody>";
+                 
+                     } 
+                   
 
-?>
-
-
-<script>
-alert( 'Alteração Efeutuada com Sucesso' )
-</script>
-
-
-
-<script>
-window.location.href = "http://filahl.rf.gd";
-</script>
-
-
-	
-	
-
-
-
-
+?>                 

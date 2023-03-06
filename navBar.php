@@ -1,5 +1,3 @@
-
-
 <!doctype html>
 <html lang="en">
 <head>
@@ -11,7 +9,6 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 </head>
 <body>
-
 
 
 <div class="container">
@@ -34,8 +31,7 @@
       <li class="nav-item">
         <a class="nav-link" href="fila.php">Voltar para a Fila </a>
       </li>
- 
-     
+      
     </ul>
   </div>
 

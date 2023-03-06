@@ -25,9 +25,13 @@ include("conecta.php");
     $inicio = ($registros*$pagina)-$registros; 
  
     $cmd = "select * from country where position = 100"; 
- 
+
+  
     $produtos = mysqli_query($conn,$cmd); 
     $total = mysqli_num_rows($produtos); 
+ 
+    
+
 
 ?>
 
